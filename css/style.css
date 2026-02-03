@@ -176,12 +176,13 @@ section {
   cursor: pointer;
 }
 
-/* ===== 3D Carousel ===== */
+/* ===== 3D Carousel 修正版 ===== */
 
 .carousel {
   position: relative;
   perspective: 1200px;
-  height: 420px;
+  height: 360px;
+  max-width: 100%;
 }
 
 .carousel-inner {
@@ -191,37 +192,44 @@ section {
   transform-style: preserve-3d;
 }
 
+/* カード本体 */
 .carousel-item {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 260px;
+  width: 240px;
+  height: 320px;
   transform-style: preserve-3d;
   transition: transform 0.6s ease, opacity 0.6s ease;
 }
 
+/* 画像制御（重要） */
 .carousel-item img {
   width: 100%;
+  height: 100%;
+  object-fit: contain; /* ← ここ超重要 */
   border-radius: 12px;
   cursor: pointer;
+  display: block;
 }
 
 /* 状態 */
 .carousel-item.is-active {
   transform: translate(-50%, -50%) translateZ(0) rotateY(0);
   z-index: 3;
+  opacity: 1;
 }
 
 .carousel-item.is-prev {
-  transform: translate(-170%, -50%) translateZ(-200px) rotateY(35deg);
-  opacity: 0.6;
+  transform: translate(-160%, -50%) translateZ(-200px) rotateY(30deg);
   z-index: 2;
+  opacity: 0.6;
 }
 
 .carousel-item.is-next {
-  transform: translate(70%, -50%) translateZ(-200px) rotateY(-35deg);
-  opacity: 0.6;
+  transform: translate(60%, -50%) translateZ(-200px) rotateY(-30deg);
   z-index: 2;
+  opacity: 0.6;
 }
 
 /* ボタン */
@@ -232,16 +240,16 @@ section {
   background: var(--orange-red);
   color: #fff;
   border: none;
-  font-size: 2rem;
-  width: 44px;
-  height: 44px;
+  font-size: 1.8rem;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   cursor: pointer;
   z-index: 5;
 }
 
-.carousel-btn.prev { left: 0; }
-.carousel-btn.next { right: 0; }
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }
 
 
 #contact {
