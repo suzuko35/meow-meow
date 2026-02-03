@@ -177,6 +177,58 @@ section {
 }
 
 
+.in-slider {
+  perspective: 1200px;
+  overflow: hidden;
+}
+.slider-inner {
+  position: relative;
+  transform-style: preserve-3d;
+}
+.slider-item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+.is-active {
+  transform:
+    translate(-50%, -50%)
+    translateZ(0)
+    rotateY(0);
+  z-index: 3;
+}
+
+.is-prev {
+  transform:
+    translate(-150%, -50%)
+    translateZ(-200px)
+    rotateY(30deg);
+  opacity: 0.7;
+  z-index: 2;
+}
+
+.is-next {
+  transform:
+    translate(50%, -50%)
+    translateZ(-200px)
+    rotateY(-30deg);
+  opacity: 0.7;
+  z-index: 2;
+}
+
+
+
+
+
+
+
+
+
+
+
 #contact {
   background: var(--emerald);
   color: #fff;
