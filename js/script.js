@@ -1,15 +1,15 @@
 
-// モーダル
-// const modal = document.getElementById("modal");
-// const modalImg = document.getElementById("modal-img");
-// const closeBtn = document.querySelector(".close");
+モーダル
+const modal = document.getElementById("modal");
+const modalImg = document.getElementById("modal-img");
+const closeBtn = document.querySelector(".close");
 
-// document.querySelectorAll(".card img").forEach(img => {
-//   img.addEventListener("click", () => {
-//     modal.style.display = "flex";
-//     modalImg.src = img.src;
-//   });
-// });
+document.querySelectorAll(".card img").forEach(img => {
+  img.addEventListener("click", () => {
+    modal.style.display = "flex";
+    modalImg.src = img.src;
+  });
+});
 
 closeBtn.onclick = () => modal.style.display = "none";
 modal.onclick = e => {
@@ -30,43 +30,25 @@ document.querySelectorAll(".carousel-item img").forEach(img => {
   });
 });
 
-
-
-// ===== 3D Carousel=====
-document.addEventListener('DOMContentLoaded', () => {
-  const items = [...document.querySelectorAll('.carousel-item')];
-  const prevBtn = document.querySelector('.carousel-btn.prev');
-  const nextBtn = document.querySelector('.carousel-btn.next');
-
-  if (!items.length) return;
-
-  let current = 0;
-
-  function updateCarousel() {
-    items.forEach((item, i) => {
-      item.classList.remove('is-prev', 'is-active', 'is-next');
-
-      if (i === current) {
-        item.classList.add('is-active');
-      } else if (i === (current - 1 + items.length) % items.length) {
-        item.classList.add('is-prev');
-      } else if (i === (current + 1) % items.length) {
-        item.classList.add('is-next');
-      } else {
-        item.style.opacity = '0';
+$(function(){
+  $('.slider').slick({
+    autoplay: true, //自動でスクロール
+    autoplaySpeed: 0, //自動再生のスライド切り替えまでの時間を設定
+    speed: 5000, //スライドが流れる速度を設定
+    cssEase: "linear", //スライドの流れ方を等速に設定
+    slidesToShow: 4, //表示するスライドの数
+    swipe: false, // 操作による切り替えはさせない
+    arrows: false, //矢印非表示
+    pauseOnFocus: false, //スライダーをフォーカスした時にスライドを停止させるか
+    pauseOnHover: false, //スライダーにマウスホバーした時にスライドを停止させるか
+    responsive: [
+      {
+        breakpoint: 750,
+        settings: {
+          slidesToShow: 3, //画面幅750px以下でスライド3枚表示
+        }
       }
-    });
-  }
-
-  prevBtn.addEventListener('click', () => {
-    current = (current - 1 + items.length) % items.length;
-    updateCarousel();
+    ]
   });
-
-  nextBtn.addEventListener('click', () => {
-    current = (current + 1) % items.length;
-    updateCarousel();
-  });
-
-  updateCarousel();
 });
+
