@@ -32,9 +32,9 @@ document.querySelectorAll(".carousel-item img").forEach(img => {
 
 
 
-// ===== 3D Carousel（安全版）=====
+// ===== 3D Carousel=====
 document.addEventListener('DOMContentLoaded', () => {
-  const items = document.querySelectorAll('.carousel-item');
+  const items = [...document.querySelectorAll('.carousel-item')];
   const prevBtn = document.querySelector('.carousel-btn.prev');
   const nextBtn = document.querySelector('.carousel-btn.next');
 
@@ -46,19 +46,25 @@ document.addEventListener('DOMContentLoaded', () => {
     items.forEach((item, i) => {
       item.classList.remove('is-prev', 'is-active', 'is-next');
 
-      if (i === current) item.classList.add('is-active');
-      if (i === current - 1) item.classList.add('is-prev');
-      if (i === current + 1) item.classList.add('is-next');
+      if (i === current) {
+        item.classList.add('is-active');
+      } else if (i === (current - 1 + items.length) % items.length) {
+        item.classList.add('is-prev');
+      } else if (i === (current + 1) % items.length) {
+        item.classList.add('is-next');
+      } else {
+        item.style.opacity = '0';
+      }
     });
   }
 
   prevBtn.addEventListener('click', () => {
-    current = Math.max(current - 1, 0);
+    current = (current - 1 + items.length) % items.length;
     updateCarousel();
   });
 
   nextBtn.addEventListener('click', () => {
-    current = Math.min(current + 1, items.length - 1);
+    current = (current + 1) % items.length;
     updateCarousel();
   });
 
