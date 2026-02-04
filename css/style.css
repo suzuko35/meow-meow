@@ -260,6 +260,15 @@ section {
   transition: transform 0.6s ease, opacity 0.6s ease;
 }
 
+.carousel-item {
+  opacity: 0;
+}
+
+.carousel-item.is-active,
+.carousel-item.is-prev,
+.carousel-item.is-next {
+  opacity: 1;
+}
 
 
 /* ボタン */
