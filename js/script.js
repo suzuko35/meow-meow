@@ -32,7 +32,7 @@ document.querySelectorAll(".carousel-item img").forEach(img => {
 
 
 
-$(document).ready(function(){
+$(function(){
   $('.slider').slick({
     autoplay: true, //自動でスクロール
     autoplaySpeed: 0, //自動再生のスライド切り替えまでの時間を設定
@@ -53,5 +53,4 @@ $(document).ready(function(){
     ]
   });
 });
-
 
