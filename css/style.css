@@ -176,7 +176,9 @@ section {
   cursor: pointer;
 }
 
-
+.slider img{
+  width: 100%;
+}
 
 
 /* ボタン */

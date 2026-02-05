@@ -1,15 +1,15 @@
 
-モーダル
-const modal = document.getElementById("modal");
-const modalImg = document.getElementById("modal-img");
-const closeBtn = document.querySelector(".close");
+// モーダル
+// const modal = document.getElementById("modal");
+// const modalImg = document.getElementById("modal-img");
+// const closeBtn = document.querySelector(".close");
 
-document.querySelectorAll(".card img").forEach(img => {
-  img.addEventListener("click", () => {
-    modal.style.display = "flex";
-    modalImg.src = img.src;
-  });
-});
+// document.querySelectorAll(".card img").forEach(img => {
+//   img.addEventListener("click", () => {
+//     modal.style.display = "flex";
+//     modalImg.src = img.src;
+//   });
+// });
 
 closeBtn.onclick = () => modal.style.display = "none";
 modal.onclick = e => {
@@ -41,6 +41,7 @@ $(function(){
     arrows: false, //矢印非表示
     pauseOnFocus: false, //スライダーをフォーカスした時にスライドを停止させるか
     pauseOnHover: false, //スライダーにマウスホバーした時にスライドを停止させるか
+    swipe: true,
     responsive: [
       {
         breakpoint: 750,
@@ -51,4 +52,5 @@ $(function(){
     ]
   });
 });
+
 
