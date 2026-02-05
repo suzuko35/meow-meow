@@ -32,8 +32,7 @@ document.querySelectorAll(".carousel-item img").forEach(img => {
 
 
 
-
-$(function(){
+$(document).ready(function(){
   $('.slider').slick({
     autoplay: true, //自動でスクロール
     autoplaySpeed: 0, //自動再生のスライド切り替えまでの時間を設定
@@ -44,7 +43,6 @@ $(function(){
     arrows: false, //矢印非表示
     pauseOnFocus: false, //スライダーをフォーカスした時にスライドを停止させるか
     pauseOnHover: false, //スライダーにマウスホバーした時にスライドを停止させるか
-    swipe: true,
     responsive: [
       {
         breakpoint: 750,
