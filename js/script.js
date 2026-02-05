@@ -1,15 +1,15 @@
 
-// モーダル
-// const modal = document.getElementById("modal");
-// const modalImg = document.getElementById("modal-img");
-// const closeBtn = document.querySelector(".close");
+モーダル
+const modal = document.getElementById("modal");
+const modalImg = document.getElementById("modal-img");
+const closeBtn = document.querySelector(".close");
 
-// document.querySelectorAll(".card img").forEach(img => {
-//   img.addEventListener("click", () => {
-//     modal.style.display = "flex";
-//     modalImg.src = img.src;
-//   });
-// });
+document.querySelectorAll(".card img").forEach(img => {
+  img.addEventListener("click", () => {
+    modal.style.display = "flex";
+    modalImg.src = img.src;
+  });
+});
 
 closeBtn.onclick = () => modal.style.display = "none";
 modal.onclick = e => {
@@ -29,6 +29,9 @@ document.querySelectorAll(".carousel-item img").forEach(img => {
     modalImg.src = img.src;
   });
 });
+
+
+
 
 $(function(){
   $('.slider').slick({
