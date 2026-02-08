@@ -39,10 +39,10 @@ $(function(){
     speed: 5000, //スライドが流れる速度を設定
     cssEase: "linear", //スライドの流れ方を等速に設定
     slidesToShow: 4, //表示するスライドの数
-    swipe: false, // 操作による切り替えはさせない
-    arrows: false, //矢印非表示
+    swipe: false, // 操作による切り替え
+    arrows: true, //矢印
     pauseOnFocus: false, //スライダーをフォーカスした時にスライドを停止させるか
-    pauseOnHover: false, //スライダーにマウスホバーした時にスライドを停止させるか
+    pauseOnHover: true, //スライダーにマウスホバーした時にスライドを停止させるか
     responsive: [
       {
         breakpoint: 750,
