@@ -6,17 +6,16 @@
   <title>My Portfolio</title>
   <link rel="stylesheet" href="css/style.css">
 <!-- css -->
-<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+<!-- <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/> -->
 <!-- js -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="slick/slick.min.js"></script>
-
+<script type="text/javascript" src="slick/slick.min.js"></script> -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body>
-
 <div class="layout">
 
   <!-- ===== 上（Hero） ===== -->
@@ -90,7 +89,7 @@
         </div>
       </div> -->
       <!-- <div class="card-wrap"> -->
-<div class="slider">
+<!-- <div class="slider">
   <div><img src="https://suzuko35.github.io/meow-meow/images/n_10.jpg" /></div>
   <div><img src="https://suzuko35.github.io/meow-meow/images/n_9.jpg" /></div>
   <div><img src="https://suzuko35.github.io/meow-meow/images/n_6.jpg" /></div>
@@ -98,11 +97,71 @@
   <div><img src="https://suzuko35.github.io/meow-meow/images/n_11.jpg" /></div>
   <div><img src="https://suzuko35.github.io/meow-meow/images/n_3.jpg" /></div>
   <div><img src="https://suzuko35.github.io/meow-meow/images/n_5.jpg" /></div>
-  <div><img src="https://suzuko35.github.io/meow-meow/images/n_1.jpg" /></div>
+  <div><img src="https://suzuko35.github.io/meow-meow/images/n_1.png" /></div>
   <div><img src="https://suzuko35.github.io/meow-meow/images/n_2.jpg" /></div>
-</div>
+</div> -->
 <!-- </div> -->
+<div class="modal" id="modal">
+      <div class="modal__overlay js-close-modal"></div>
+      <div class="modal__content">
+        <button class="modal__close-btn js-close-modal" aria-label="閉じる">×</button>
+        <!-- スライダー -->
+         <div class="swiper_container">
+      <div class="swiper">
+        <div class="swiper modal__slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide modal__slide">スライド1</div>
+            <div class="swiper-slide modal__slide">スライド2</div>
+            <div class="swiper-slide modal__slide">スライド3</div>
+            <div class="swiper-slide modal__slide">スライド4</div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
 
+
+
+ <!-- <div class="swiper_container">
+ <div class="swiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <img src="https://suzuko35.github.io/meow-meow/images/n_10.jpg" alt="" />
+    </div>
+    <div class="swiper-slide">
+      <img src="https://suzuko35.github.io/meow-meow/images/n_9.jpg" alt="" />
+    </div>
+    <div class="swiper-slide">
+      <img src="https://suzuko35.github.io/meow-meow/images/n_6.jpg" alt="" />
+    </div>
+    <div class="swiper-slide">
+      <img src="https://suzuko35.github.io/meow-meow/images/n_4.jpg" alt="" />
+    </div>
+    <div class="swiper-slide">
+      <img src="https://suzuko35.github.io/meow-meow/images/n_11.jpg" alt="" />
+    </div>
+    <div class="swiper-slide">
+      <img src="https://suzuko35.github.io/meow-meow/images/n_3.jpg" alt="" />
+    </div>
+    <div class="swiper-slide">
+      <img src="https://suzuko35.github.io/meow-meow/images/n_5.jpg" alt="" />
+    </div>
+    <div class="swiper-slide">
+      <img src="https://suzuko35.github.io/meow-meow/images/n_1.png" alt="" />
+    </div>
+    <div class="swiper-slide">
+      <img src="https://suzuko35.github.io/meow-meow/images/n_2.jpg" alt="" />
+    </div>
+  </div>
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+</div>
+</div> -->
     </section>
 
     <section id="contact">
@@ -125,5 +184,6 @@
 <button id="back-to-top">↑</button>
 
 <script src="js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 </html>
