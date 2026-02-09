@@ -57,31 +57,6 @@ document.querySelectorAll(".carousel-item img").forEach(img => {
 //   });
 // });
 
-// const swiper = new Swiper(".swiper", {
-//   loop: true, // デフォルトはfalse
-//   autoplay: true,// 自動再生
-//   delay: 1000, // 1秒後に次のスライド（初期値：3000）
-//   disableOnInteraction: false, // 矢印をクリックしても自動再生を止めない
-//   navigation: {
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev",
-//   },
-  
-//   spaceBetween: 30,
-//    // スライドの表示枚数
-//   slidesPerView: 1,
-//   breakpoints: {
-//     // スライドの表示枚数：500px以上の場合
-//     768: {
-//       slidesPerView: 3,
-//     }
-//   }
-// });
-
-
-
-
-
 window.addEventListener("DOMContentLoaded", () => {
   // モーダルを取得
   const modal = document.getElementById("modal");
@@ -92,22 +67,12 @@ window.addEventListener("DOMContentLoaded", () => {
 
   // Swiperの設定
   const swiper = new Swiper(".swiper", {
-    oop: true, // デフォルトはfalse
-  autoplay: true, // 自動再生
-  delay: 1000, // 1秒後に次のスライド（初期値：3000）
-  disableOnInteraction: false, // 矢印をクリックしても自動再生を止めない
+    loop: true,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
     spaceBetween: 30,
-    slidesPerView: 1,
-  breakpoints: {
-    // スライドの表示枚数：500px以上の場合
-    768: {
-      slidesPerView: 3,
-    }
-  }
   });
 
   // モーダルを表示するボタンをクリックしたとき
