@@ -33,6 +33,7 @@ document.querySelectorAll(".carousel-item img").forEach(img => {
 
 
 
+
 const swiper = new Swiper(".swiper", {
   loop: true,
   // ページネーション
@@ -49,4 +50,21 @@ const swiper = new Swiper(".swiper", {
   scrollbar: {
     el: ".swiper-scrollbar",
   },
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const swiper = new Swiper(".swiper", {
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    scrollbar: {
+      el: ".swiper-scrollbar",
+    },
+  });
 });

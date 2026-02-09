@@ -181,6 +181,15 @@ section {
   width: 100%;
 }
 
+.swiper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.swiper-slide {
+  text-align: center;
+}
+
 
 /* ボタン */
 .carousel-btn {
