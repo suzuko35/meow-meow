@@ -34,23 +34,7 @@ document.querySelectorAll(".carousel-item img").forEach(img => {
 
 
 
-const swiper = new Swiper(".swiper", {
-  loop: true,
-  // ページネーション
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  // 前後の矢印
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  // スクロールバー
-  scrollbar: {
-    el: ".swiper-scrollbar",
-  },
-});
+
 
 document.addEventListener("DOMContentLoaded", () => {
   const swiper = new Swiper(".swiper", {
