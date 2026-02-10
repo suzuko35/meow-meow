@@ -199,6 +199,7 @@ section {
 .swiper-button-next {
   right: -30px;
 }
+
 /* ページネーション */
 .swiper-pagination-bullets.swiper-pagination-horizontal {
   bottom: -25px;
@@ -210,6 +211,18 @@ section {
   position: relative;
 }
 
+.container {
+  margin-inline: auto;
+  max-width: 500px;
+  position: relative;
+}
+.swiper {
+  max-width: 500px;
+}
+.swiper-slide img {
+  height: auto;
+  width: 100%;
+}
 
 /* ボタン */
 .carousel-btn {
