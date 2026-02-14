@@ -4,9 +4,7 @@
   --dark-bg: #264653;
 }
 
-*,
-*::before,
-*::after {
+* {
   box-sizing: border-box;
 }
 
@@ -15,17 +13,13 @@ body {
   font-family: 'M PLUS 1p', sans-serif;
 }
 
-/* =====================
-   レイアウト
-===================== */
-
+/* レイアウト */
 .layout {
   display: flex;
   flex-direction: column;
 }
 
 /* Hero */
-
 .left {
   width: 100%;
   min-height: 100vh;
@@ -51,17 +45,13 @@ body {
 }
 
 /* メイン */
-
 .right {
   width: 100%;
   background: #ccc;
   padding-top: 70px;
 }
 
-/* =====================
-   ナビ
-===================== */
-
+/* ナビ */
 .navbar {
   position: fixed;
   top: 0;
@@ -108,41 +98,12 @@ body {
   width: 100%;
 }
 
-/* =====================
-   セクション共通
-===================== */
-
+/* セクション */
 section {
   padding: 4rem 2rem;
 }
 
-.section-band {
-  position: relative;
-  background: #333;
-  color: #fff;
-  padding: 1rem;
-  margin-bottom: 3rem;
-  text-align: center;
-}
-
-/* キャラ */
-
-.character {
-  position: absolute;
-  top: -40px;
-}
-
-.character1 { left: 10%; }
-.character2 { right: 10%; }
-
-.character img {
-  max-width: 120px;
-}
-
-/* =====================
-   Profile
-===================== */
-
+/* Profile */
 .profile-section {
   display: flex;
   border-radius: 20px;
@@ -165,14 +126,50 @@ section {
   color: #fff;
 }
 
-/* =====================
-   Card
-===================== */
+/* セクション帯 */
+.section-band {
+  position: relative;
+  background: #333;
+  color: #fff;
+  padding: 1rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
 
+/* キャラ */
+.character {
+  position: absolute;
+  top: -40px;
+}
+
+.character1 { left: 10%; }
+.character2 { right: 10%; }
+
+.character img {
+  max-width: 120px;
+}
+
+/* カード */
 .card-wrap {
   padding: 3rem;
   background: #fff;
   border-radius: 1rem;
+}
+
+.card {
+  background: #fff;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.card img:hover {
+  transform: scale(1.05);
 }
 
 .card-grid {
@@ -181,58 +178,21 @@ section {
   gap: 1.25rem;
 }
 
-.card {
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.card img {
-  width: 100%;
-  transition: transform 0.3s;
-}
-
-.card img:hover {
-  transform: scale(1.05);
-}
-
-/* =====================
-   Swiper
-===================== */
-
-.swiper-container {
-  position: relative;
-  margin-inline: auto;
-  max-width: 80%;
-}
+/* ===== Swiper ===== */
 
 .swiper {
   width: 100%;
-  padding: 3rem 0;
+  margin: 0 auto;
+  position: relative;
+  padding: 3rem;
 }
 
 .swiper-slide {
   text-align: center;
   transform: scale(0.6);
   opacity: 0.4;
-  transition: transform 0.4s ease, opacity 0.4s ease;
-  z-index: 1;
+  transition: all 0.4s ease;
 }
-
-.swiper-slide img {
-  width: 100%;
-  height: auto;
-}
-
-/* 左右 */
-
-.swiper-slide-prev,
-.swiper-slide-next {
-  transform: scale(0.85);
-  opacity: 0.7;
-  z-index: 5;
-}
-
-/* 中央 */
 
 .swiper-slide-active {
   transform: scale(1.3);
@@ -240,53 +200,83 @@ section {
   z-index: 10;
 }
 
-.swiper-slide-active img {
-  box-shadow: 0 0.5em 1em rgba(0,0,0,0.3);
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+}
+
+.swiper-slide-active {
+  transform: scale(1);
+  opacity: 1;
 }
 
 /* 矢印 */
-
 .swiper-button-prev,
 .swiper-button-next {
   color: var(--orange-red);
 }
 
 .swiper-button-prev {
-  left: -40px;
+  left: -30px;
 }
 
 .swiper-button-next {
-  right: -40px;
+  right: -30px;
 }
 
 /* ページネーション */
-
-.swiper-pagination {
-  bottom: -25px !important;
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: -25px;
 }
 
-/* =====================
-   Contact
-===================== */
+.swiper-slide {
+  transform: scale(0.6);
+  opacity: 0.4;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  z-index: 1;
+}
 
+/* 左右 */
+.swiper-slide-prev,
+.swiper-slide-next {
+  transform: scale(0.85);
+  opacity: 0.7;
+  z-index: 5;
+}
+
+/* 中央（active） */
+.swiper-slide-active {
+  transform: scale(1.3)!important;
+  opacity: 1;
+  z-index: 10;
+}
+
+/* 影 */
+.swiper-slide-active img {
+  box-shadow: 0 0.5em 1em rgba(0,0,0,0.3);
+}
+
+.swiper-container {
+  margin-inline: auto;
+  max-width: 100%;
+  position: relative;
+}
+.swiper {
+  max-width: 80%;
+}
+.swiper-slide img {
+  height: auto;
+  width: 100%;
+}
+
+/* Contact */
 #contact {
   background: var(--emerald);
   color: #fff;
   text-align: center;
 }
 
-.contact-btn {
-  background: var(--orange-red);
-  padding: 1rem 2rem;
-  border-radius: 30px;
-  color: #fff;
-  text-decoration: none;
-}
-
-/* =====================
-   Modal
-===================== */
-
+/* モーダル */
 .modal {
   display: none;
   position: fixed;
@@ -302,22 +292,28 @@ section {
 }
 
 .modaal-gallery-item img {
-  width: 60% !important;
+    width: 60% !important;
 }
 
 .close {
   position: absolute;
   top: 20px;
   right: 30px;
-  font-size: 40px;
   color: #fff;
+  font-size: 40px;
   cursor: pointer;
 }
 
-/* =====================
-   Back to top
-===================== */
+/* ボタン */
+.contact-btn {
+  background: var(--orange-red);
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  color: #fff;
+  text-decoration: none;
+}
 
+/* トップへ戻る */
 #back-to-top {
   position: fixed;
   bottom: 2rem;
@@ -331,10 +327,7 @@ section {
   cursor: pointer;
 }
 
-/* =====================
-   Footer
-===================== */
-
+/* フッター */
 footer {
   background: #333;
   color: #fff;
