@@ -262,7 +262,7 @@ section {
   position: relative;
 }
 .swiper {
-  max-width: 100%;
+  max-width: 80%;
 }
 .swiper-slide img {
   height: auto;
