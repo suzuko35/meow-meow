@@ -182,7 +182,6 @@ section {
 
 .swiper {
   width: 100%;
-  max-width: 500px;
   margin: 0 auto;
   position: relative;
   padding: 2rem;
@@ -255,6 +254,19 @@ section {
 /* 影 */
 .swiper-slide-active img {
   box-shadow: 0 0.5em 1em rgba(0,0,0,0.3);
+}
+
+.swiper-container {
+  margin-inline: auto;
+  max-width: 80%;
+  position: relative;
+}
+.swiper {
+  max-width: 80%;
+}
+.swiper-slide img {
+  height: auto;
+  width: 100%;
 }
 
 /* Contact */
