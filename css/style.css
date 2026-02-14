@@ -295,7 +295,7 @@ section {
 }
 
 footer {
-  background: var(--dark-bg);
+  background: #333;
   color: #fff;
   text-align: center;
   padding: 1rem;

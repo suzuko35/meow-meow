@@ -36,19 +36,36 @@ document.querySelectorAll(".carousel-item img").forEach(img => {
 
 
 
-document.addEventListener("DOMContentLoaded", () => {
-  const swiper = new Swiper(".swiper", {
+// document.addEventListener("DOMContentLoaded", () => {
+//   const swiper = new Swiper(".swiper", {
+//     loop: true,
+//     pagination: {
+//       el: ".swiper-pagination",
+//       clickable: true,
+//     },
+//     navigation: {
+//       nextEl: ".swiper-button-next",
+//       prevEl: ".swiper-button-prev",
+//     },
+//     scrollbar: {
+//       el: ".swiper-scrollbar",
+//     },
+//   });
+// });
+
+
+//Swiper
+const swiper = new Swiper('.swiper-container', {
     loop: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
+    slidesPerView: 1,
+    centeredSlides: true,
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
     },
-    scrollbar: {
-      el: ".swiper-scrollbar",
-    },
-  });
+});
+
+//Modaall
+$('.image').modaal({
+    type: 'image'
 });
