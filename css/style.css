@@ -189,9 +189,15 @@ section {
 
 .swiper-slide {
   text-align: center;
-  transform: scale(0.8);
-  opacity: 0.5;
+  transform: scale(0.6);
+  opacity: 0.4;
   transition: all 0.4s ease;
+}
+
+.swiper-slide-active {
+  transform: scale(1.3);
+  opacity: 1;
+  z-index: 10;
 }
 
 .swiper-slide img {
