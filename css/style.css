@@ -258,11 +258,11 @@ section {
 
 .swiper-container {
   margin-inline: auto;
-  max-width: 90%;
+  max-width: 100%;
   position: relative;
 }
 .swiper {
-  max-width: 80%;
+  max-width: 100%;
 }
 .swiper-slide img {
   height: auto;
