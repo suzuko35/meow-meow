@@ -189,11 +189,19 @@ section {
 
 .swiper-slide {
   text-align: center;
+  transform: scale(0.8);
+  opacity: 0.5;
+  transition: all 0.4s ease;
 }
 
 .swiper-slide img {
   width: 100%;
   height: auto;
+}
+
+.swiper-slide-active {
+  transform: scale(1);
+  opacity: 1;
 }
 
 /* 矢印 */
