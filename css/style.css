@@ -245,6 +245,10 @@ section {
   max-width: 50%;
 }
 
+.modaal-gallery-item img {
+    width: 60%;
+}
+
 .close {
   position: absolute;
   top: 20px;
