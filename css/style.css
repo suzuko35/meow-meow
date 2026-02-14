@@ -265,6 +265,16 @@ section {
   max-width: 50%;
 }
 
+.swiper-button-prev,
+.swiper-button-next {
+  color: #d1513f;
+}
+
+.swiper-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
 .close {
     position: absolute;
     top: 20px;

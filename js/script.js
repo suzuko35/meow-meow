@@ -56,25 +56,27 @@ document.querySelectorAll(".carousel-item img").forEach(img => {
 
 //Swiper
 const swiper = new Swiper('.swiper-container', {
-    loop: true,
-    slidesPerView: 3,
-    centeredSlides: true,
-    speed: 1500, // 少しゆっくり(デフォルトは300)
-    autoplay: { // 自動再生
-    delay: 1500, // 1.5秒後に次のスライド
-    disableOnInteraction: false, // 矢印をクリックしても自動再生を止めない
+  loop: true,
+  slidesPerView: 3,
+  centeredSlides: true,
+  spaceBetween: 30,
+  speed: 1500,
+  autoplay: {
+    delay: 1500,
+    disableOnInteraction: false,
   },
   pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
 });
 
 //Modaall
 $('.image').modaal({
     type: 'image'
 });
+
