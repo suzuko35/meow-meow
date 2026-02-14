@@ -57,6 +57,7 @@ document.querySelectorAll(".carousel-item img").forEach(img => {
 //Swiper
 const swiper = new Swiper('.swiper', {
   loop: true,
+  loopAdditionalSlides: 1,
   slidesPerView: 3,
   centeredSlides: true,
   spaceBetween: 30,
