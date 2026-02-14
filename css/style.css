@@ -13,7 +13,7 @@ body {
   font-family: 'M PLUS 1p', sans-serif;
 }
 
-
+/* レイアウト */
 .layout {
   display: flex;
   flex-direction: column;
@@ -23,8 +23,7 @@ body {
 .left {
   width: 100%;
   min-height: 100vh;
-  background: url(../images/onnanoko2.jpg) no-repeat 46%/cover,
-              var(--emerald);
+  background: url(../images/onnanoko2.jpg) no-repeat 46%/cover, var(--emerald);
 }
 
 #hero {
@@ -54,7 +53,7 @@ body {
 
 /* ナビ */
 .navbar {
-  position: fixed; 
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -65,38 +64,38 @@ body {
 
 .navbar ul {
   list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
 }
 
 .navbar a {
   color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    position: relative;
-    transition: color 0.3s;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s;
 }
 
 .navbar a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -0.3rem;
-    width: 0%;
-    height: 2px;
-    background: #ffc788;
-    transition: width 0.3s;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.3rem;
+  width: 0%;
+  height: 2px;
+  background: #ffc788;
+  transition: width 0.3s;
 }
-.navbar a:hover{
+
+.navbar a:hover {
   color: #ffc788;
 }
 
-.navbar a:hover::after
- {
-    width: 100%;
+.navbar a:hover::after {
+  width: 100%;
 }
 
 /* セクション */
@@ -104,7 +103,7 @@ section {
   padding: 4rem 2rem;
 }
 
-
+/* Profile */
 .profile-section {
   display: flex;
   border-radius: 20px;
@@ -127,6 +126,7 @@ section {
   color: #fff;
 }
 
+/* セクション帯 */
 .section-band {
   position: relative;
   background: #333;
@@ -136,6 +136,7 @@ section {
   text-align: center;
 }
 
+/* キャラ */
 .character {
   position: absolute;
   top: -40px;
@@ -148,20 +149,27 @@ section {
   max-width: 120px;
 }
 
-.card-wrap{
+/* カード */
+.card-wrap {
   padding: 3rem;
-    background: #fff;
-    border-radius: 1rem;
+  background: #fff;
+  border-radius: 1rem;
 }
 
 .card {
-    background: #fff;
-    cursor: pointer;
-    overflow: hidden;
+  background: #fff;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  cursor: pointer;
+  transition: transform 0.3s;
 }
 
 .card img:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .card-grid {
@@ -170,32 +178,34 @@ section {
   gap: 1.25rem;
 }
 
-.card img {
-  width: 100%;
-  transition: transform 0.3s;
-  cursor: pointer;
-}
-
-.swiper-slide img {
-  height: auto;
-  width: 100%;
-}
+/* ===== Swiper ===== */
 
 .swiper {
   width: 100%;
-  margin: 0 auto;
   max-width: 500px;
+  margin: 0 auto;
+  position: relative;
 }
 
 .swiper-slide {
   text-align: center;
 }
 
-/* 前への矢印 */
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+}
+
+/* 矢印 */
+.swiper-button-prev,
+.swiper-button-next {
+  color: var(--orange-red);
+}
+
 .swiper-button-prev {
   left: -30px;
 }
-/* 次への矢印 */
+
 .swiper-button-next {
   right: -30px;
 }
@@ -204,59 +214,21 @@ section {
 .swiper-pagination-bullets.swiper-pagination-horizontal {
   bottom: -25px;
 }
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 500px;
-  position: relative;
-}
 
-.container {
-  margin-inline: auto;
-  max-width: 500px;
-  position: relative;
-}
-.swiper {
-  max-width: 500px;
-}
-.swiper-slide img {
-  height: auto;
-  width: 100%;
-}
-
-
-/* ボタン */
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: var(--orange-red);
-  color: #fff;
-  border: none;
-  font-size: 1.8rem;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 5;
-}
-
-.carousel-btn.prev { left: 10px; }
-.carousel-btn.next { right: 10px; }
-
-
+/* Contact */
 #contact {
   background: var(--emerald);
   color: #fff;
   text-align: center;
 }
 
+/* モーダル */
 .modal {
   display: none;
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.8);
-  z-index: 1000; 
+  z-index: 1000;
 }
 
 .modal-content {
@@ -265,25 +237,16 @@ section {
   max-width: 50%;
 }
 
-.swiper-button-prev,
-.swiper-button-next {
-  color: #d1513f;
-}
-
-.swiper-container {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
 .close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    color: #fff;
-    font-size: 40px;
-    cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+  font-size: 40px;
+  cursor: pointer;
 }
 
+/* ボタン */
 .contact-btn {
   background: var(--orange-red);
   padding: 1rem 2rem;
@@ -292,10 +255,12 @@ section {
   text-decoration: none;
 }
 
-#back-to-top { 
-  position: fixed; bottom: 2rem;
+/* トップへ戻る */
+#back-to-top {
+  position: fixed;
+  bottom: 2rem;
   right: 2rem;
-  background: var(--orange-red); 
+  background: var(--orange-red);
   color: #fff;
   border: none;
   border-radius: 50%;
@@ -304,6 +269,7 @@ section {
   cursor: pointer;
 }
 
+/* フッター */
 footer {
   background: #333;
   color: #fff;

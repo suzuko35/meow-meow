@@ -55,7 +55,7 @@ document.querySelectorAll(".carousel-item img").forEach(img => {
 
 
 //Swiper
-const swiper = new Swiper('.swiper-container', {
+const swiper = new Swiper('.swiper', {
   loop: true,
   slidesPerView: 3,
   centeredSlides: true,
