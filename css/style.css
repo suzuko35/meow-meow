@@ -258,7 +258,7 @@ section {
 
 .swiper-container {
   margin-inline: auto;
-  max-width: 80%;
+  max-width: 90%;
   position: relative;
 }
 .swiper {
@@ -286,7 +286,7 @@ section {
 }
 
 .modal-content {
-  margin: auto;
+  margin: 0 auto;
   display: block;
   max-width: 50%;
 }
