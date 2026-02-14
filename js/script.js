@@ -64,6 +64,10 @@ const swiper = new Swiper('.swiper-container', {
     delay: 1500, // 1.5秒後に次のスライド
     disableOnInteraction: false, // 矢印をクリックしても自動再生を止めない
   },
+  pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
