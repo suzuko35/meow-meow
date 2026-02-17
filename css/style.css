@@ -26,6 +26,12 @@ body {
   background: url(../images/onnanoko2.jpg) no-repeat 46%/cover, var(--emerald);
 }
 
+#particleCanvas {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+}
+
 #hero {
   height: 100%;
   color: #fff;
