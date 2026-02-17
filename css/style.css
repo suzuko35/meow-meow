@@ -234,6 +234,7 @@ section {
   opacity: 0.4;
   transition: transform 0.4s ease, opacity 0.4s ease;
   z-index: 1;
+  margin-right: 6%!important;
 }
 
 /* 左右 */
