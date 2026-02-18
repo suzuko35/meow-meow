@@ -11,6 +11,7 @@
 body {
   margin: 0;
   font-family: 'M PLUS 1p', sans-serif;
+  background: #cdcdcd;
 }
 
 /* レイアウト */
@@ -53,7 +54,7 @@ body {
 /* メイン */
 .right {
   width: 100%;
-  background: #ccc;
+  /* background: #ccc; */
   padding-top: 70px;
 }
 

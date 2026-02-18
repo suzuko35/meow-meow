@@ -97,7 +97,7 @@ class Particle {
   constructor() {
     this.x = Math.random() * canvas.width;
     this.y = Math.random() * canvas.height;
-    this.size = Math.random() * 2;
+    this.size = Math.random() * 3;
     this.speedX = (Math.random() - 0.5) * 0.4;
     this.speedY = (Math.random() - 0.5) * 0.4;
   }
@@ -110,13 +110,13 @@ class Particle {
     if (this.y > canvas.height) this.y = 0;
   }
   draw() {
-    ctx.fillStyle = "rgba(127, 127, 127, 0.46)";
+    ctx.fillStyle = "rgba(77, 77, 77, 0.46)";
     ctx.fillRect(this.x, this.y, this.size, this.size);
   }
 }
 
 const particles = [];
-for (let i = 0; i < 300; i++) particles.push(new Particle());
+for (let i = 0; i < 600; i++) particles.push(new Particle());
 
 function animate() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
