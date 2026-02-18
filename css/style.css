@@ -1,5 +1,5 @@
 :root {
-  --emerald: #2d8171;
+  --emerald: #57b6a6;
   --orange-red: #d1513f;
   --dark-bg: #264653;
 }
@@ -270,7 +270,7 @@ section {
   position: relative;
 }
 .swiper {
-  max-width: 80%;
+  max-width: 90%;
 }
 .swiper-slide img {
   height: auto;
