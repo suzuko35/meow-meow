@@ -309,6 +309,7 @@ section {
 .modaal-gallery-item.is_active {
     display: flex;
     justify-content: center;
+    background: none;
 }
 
 .modaal-gallery-item img {
