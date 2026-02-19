@@ -306,6 +306,11 @@ section {
   max-width: 50%;
 }
 
+.modaal-gallery-item.is_active {
+    display: flex;
+    justify-content: center;
+}
+
 .modaal-gallery-item img {
     width: 60% !important;
 }
