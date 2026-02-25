@@ -285,6 +285,11 @@ section {
 }
 
 /* モーダル */
+.modaal-container {
+  width: 90%;
+  max-width: 600px;
+}
+
 .modal {
   display: none;
   position: fixed;
@@ -306,15 +311,21 @@ section {
   max-width: 50%;
 }
 
-.modaal-gallery-item.is_active {
-    display: flex;
-    justify-content: center;
-    background: none;
+.modaal-content-container {
+  padding: 0;
 }
 
 .modaal-gallery-item img {
-    width: 60% !important;
+  width: 100%;
+  height: auto;
+  display: block;
 }
+
+.modaal-gallery-item.is_active {
+    display: flex;
+    justify-content: center;
+}
+
 
 .close {
   position: absolute;

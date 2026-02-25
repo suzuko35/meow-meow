@@ -116,7 +116,7 @@ class Particle {
 }
 
 const particles = [];
-for (let i = 0; i < 1000; i++) particles.push(new Particle());
+for (let i = 0; i < 1600; i++) particles.push(new Particle());
 
 function animate() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
