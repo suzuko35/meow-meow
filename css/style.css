@@ -332,8 +332,8 @@ section {
 /* PCサイズのとき */
 @media screen and (min-width: 768px) {
   .modaal-container {
-    width: 70%;
-    max-width: 70%;
+    width: 70%!important;
+    max-width: 70%!important;
   }
 }
 
