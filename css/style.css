@@ -27,11 +27,11 @@ body {
   background: url(../images/onnanoko2.jpg) no-repeat 46%/cover, var(--emerald);
 }
 
-#particleCanvas {
+/* #particleCanvas {
   position: fixed;
   inset: 0;
   z-index: -1;
-}
+} */
 
 #hero {
   height: 100%;
@@ -56,6 +56,41 @@ body {
   width: 100%;
   /* background: #ccc; */
   padding-top: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #414141;
+  z-index: -1;
+}
+
+
+.Paper {
+  background-image:
+    repeating-linear-gradient(to bottom,
+      transparent 25px,
+      rgba(0, 0, 0, 0.04) 26px,  rgba(0, 0, 0, 0.04) 26px,
+      transparent 27px,  transparent 51px, 
+      rgba(0, 0, 0, 0.04) 52px,  rgba(0, 0, 0, 0.04) 52px,
+      transparent 53px,  transparent 77px, 
+      rgba(0, 0, 0, 0.04) 78px,  rgba(0, 0, 0, 0.04) 78px,
+      transparent 79px,  transparent 103px, 
+      rgba(0, 0, 0, 0.04) 104px,  rgba(0, 0, 0, 0.04) 104px,
+      transparent 105px,  transparent 129px, 
+      rgba(0, 0, 0, 0.04) 130px,  rgba(0, 0, 0, 0.04) 130px),
+
+    repeating-linear-gradient(to right,
+      transparent 25px,
+      rgba(0, 0, 0, 0.04) 26px,  rgba(0, 0, 0, 0.04) 26px,
+      transparent 27px,  transparent 51px, 
+      rgba(0, 0, 0, 0.04) 52px,  rgba(0, 0, 0, 0.04) 52px,
+      transparent 53px,  transparent 77px, 
+      rgba(0, 0, 0, 0.04) 78px,  rgba(0, 0, 0, 0.04) 78px,
+      transparent 79px,  transparent 103px, 
+      rgba(0, 0, 0, 0.04) 104px,  rgba(0, 0, 0, 0.04) 104px,
+      transparent 105px,  transparent 129px, 
+      rgba(0, 0, 0, 0.04) 130px,  rgba(0, 0, 0, 0.04) 130px);
 }
 
 /* ナビ */
@@ -332,8 +367,8 @@ section {
 /* PCサイズのとき */
 @media screen and (min-width: 768px) {
   .modaal-container {
-    width: 70%!important;
-    max-width: 70%!important;
+    width: 60%!important;
+    max-width: 60%!important;
   }
 }
 
