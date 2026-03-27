@@ -58,16 +58,16 @@ body {
 }
 
 .paper {
-  background-color: #adadad;
+  background-color: #ccc;
 	background-image:
 		repeating-linear-gradient(90deg,
-		rgba(255, 0, 14, 0.5) 0px,
-		rgba(255, 0, 14, 0.5) 2px,
+		rgba(255, 0, 14, 1) 0px,
+		rgba(255, 0, 14, 1) 1px,
 		rgba(0, 0, 0, 0) 0px,
 		rgba(0, 0, 0, 0) 30px),
 		repeating-linear-gradient(180deg,
-		rgba(6, 137, 128, 0.5) 0px,
-		rgba(6, 137, 128, 0.5) 2px,
+		rgba(255, 0, 14, 1) 0px,
+		rgba(255, 0, 14, 1) 1px,
 		rgba(0, 0, 0, 0) 0px,
 		rgba(0, 0, 0, 0) 30px);
 }
