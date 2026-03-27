@@ -11,7 +11,6 @@
 body {
   margin: 0;
   font-family: 'M PLUS 1p', sans-serif;
-  background: #cdcdcd;
 }
 
 /* レイアウト */
@@ -59,18 +58,18 @@ body {
 }
 
 .paper {
-  background-color: #b8b8b8;
+  background-color: #adadad;
 	background-image:
 		repeating-linear-gradient(90deg,
-		rgba(140, 140, 140, 0.5) 0px,
-		rgba(140, 140, 140, 0.5) 1px,
+		rgba(255, 0, 14, 0.5) 0px,
+		rgba(255, 0, 14, 0.5) 2px,
 		rgba(0, 0, 0, 0) 0px,
-		rgba(0, 0, 0, 0) 28px),
+		rgba(0, 0, 0, 0) 30px),
 		repeating-linear-gradient(180deg,
-		rgba(140, 140, 140, 0.5) 0px,
-		rgba(140, 140, 140, 0.5) 1px,
+		rgba(6, 137, 128, 0.5) 0px,
+		rgba(6, 137, 128, 0.5) 2px,
 		rgba(0, 0, 0, 0) 0px,
-		rgba(0, 0, 0, 0) 28px);
+		rgba(0, 0, 0, 0) 30px);
 }
 
 /* ナビ */
